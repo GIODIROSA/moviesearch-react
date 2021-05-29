@@ -1,5 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
+import Card from "../components/Card/Card";
 
-const List = () => <h1>List</h1>;
+class List extends Component {
+  render() {
+    return <Card />;
+  }
+}
+
 
 export default List;
