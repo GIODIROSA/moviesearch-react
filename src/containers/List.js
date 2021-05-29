@@ -13,6 +13,7 @@ class List extends Component {
 
   async componentDidMount() {
     const res = await fetch("https://api.covid19api.com/countries");
+
     const resJSON = await res.json();
     //console.table(resJSON);
     this.setState({ data: resJSON });
@@ -20,7 +21,7 @@ class List extends Component {
 
   render() {
     return this.state.data.map((country) => {
-      return <Card country={country}/>
+      return <Card country={country} key={country.Slug} />;
     });
   }
 }
