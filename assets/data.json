@@ -1,0 +1,38 @@
+[
+    {
+      "id": "1",
+      "title": "Avatar",
+      "poster": "media/avatar.jpg",
+      "year": "2009",
+      "type": "movie"
+    },
+    {
+      "id": "2",
+      "title": "Titanic",
+      "year": "1997",
+      "poster": "media/titanic.jpg",
+      "type": "movie"
+    },
+    {
+      "id": "3",
+      "title": "Star Wars: The Force Awakens",
+      "year": "2015",
+      "poster": "media/star_wars_the_force_awakens.jpg",
+      "type": "movie"
+    },
+    {
+      "id": "4",
+      "title": "Avengers: Infinity War",
+      "year": "2018",
+      "amount": "$2,048,359,754",
+      "poster": "media/avengers_infinity_war.jpg",
+      "type": "movie"
+    },
+    {
+      "id": "5",
+      "title": "Jurassic World",
+      "year": "2015",
+      "poster": "media/jurassic_world.jpg",
+      "type": "movie"
+    }
+  ]

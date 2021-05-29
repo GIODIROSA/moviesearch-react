@@ -1,9 +1,14 @@
 import React, { Component } from "react";
 
-class Card extends Component {
-  render() {
-    return <h1>Card</h1>;
-  }
-}
+const Card = ({ country }) => {
+  return (
+    <div>
+      <h4>
+        {country.Country} {country.Iso2}
+      </h4>
+      <p>{country.Slug}</p>
+    </div>
+  );
+};
 
 export default Card;
