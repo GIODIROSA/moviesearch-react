@@ -1,12 +1,17 @@
 import React from "react";
 
-const Card = ({ country }) => {
+const Card = ({ movie }) => {
   return (
-    <div>
-      <h4>
-        {country.Country} {country.ISO2}
-      </h4>
-      <p>{country.Slug}</p>
+    <div className="col-md-4">
+      <img src={movie.Poster} alt={movie.Title} className="card - img - top" />
+      <div className="card">
+        <div className="card-body">
+          <h4>
+            {movie.Title} - {movie.Year}
+          </h4>
+          <p> {movie.Type}</p>
+        </div>
+      </div>
     </div>
   );
 };

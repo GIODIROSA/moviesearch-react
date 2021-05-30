@@ -1,14 +1,17 @@
 import "./App.css";
 
 import List from "./containers/List";
+// import data from "./assets/data.json"; "queda pendiente revisar"
 
+// console.log(data);
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hola a todos</h1>
-      <List />
-    </div>
+    <main className="bg-dark">
+      <div className="container">
+        <List />
+      </div>
+    </main>
   );
 }
 

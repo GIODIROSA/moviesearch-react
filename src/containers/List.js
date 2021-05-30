@@ -1,5 +1,7 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import Card from "../components/Card/Card";
+
+const API = "http://www.omdbapi.com/?i=tt3896198&apikey=c8983d12"; //&s= para busqueda
 
 class List extends Component {
   //apenas la aplicacion sea instalacida
@@ -12,17 +14,33 @@ class List extends Component {
   }
 
   async componentDidMount() {
-    const res = await fetch("https://api.covid19api.com/countries");
-
+    const res = await fetch(`${API}&s=batman`);
     const resJSON = await res.json();
-    //console.table(resJSON);
-    this.setState({ data: resJSON });
+    console.log(resJSON);
+
+    this.setState({ data: resJSON.Search });
   }
 
   render() {
-    return this.state.data.map((country) => {
-      return <Card country={country} key={country.Slug} />;
-    });
+    return (
+      <Fragment>
+        <div className="col-md-4 offset-md-4 p-4">
+          <form>
+            <label htmlFor="searchMovie" />
+            <input
+              id="searchMovie"
+              placeholder="Escribe una movie..."
+              name="serchMovie"
+            />
+          </form>
+        </div>
+        <div className="row">
+          {this.state.data.map((movie) => {
+            return <Card movie={movie} key={movie.imdbID} />;
+          })}
+        </div>
+      </Fragment>
+    );
   }
 }
 
