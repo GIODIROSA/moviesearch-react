@@ -26,7 +26,10 @@ class List extends Component {
       <Fragment>
         <div className="col-md-4 offset-md-4 p-4">
           <form>
-            <label htmlFor="searchMovie" />
+            <label htmlFor="searchMovie">
+              Ingresa el nombre de una pelicula
+            </label>
+            <br />
             <input
               id="searchMovie"
               placeholder="Escribe una movie..."
