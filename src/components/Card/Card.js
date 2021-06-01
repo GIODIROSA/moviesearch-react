@@ -1,9 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const Card = ({ movie }) => {
   return (
     <div className="col-md-4">
-      <img src={movie.Poster} alt={movie.Title} className="card - img - top" />
+      <img
+        src={movie.Poster}
+        alt={movie.Title}
+        className="card-img-top"
+        width="100"
+      />
       <div className="card">
         <div className="card-body">
           <h4>
@@ -14,6 +20,16 @@ const Card = ({ movie }) => {
       </div>
     </div>
   );
+};
+
+Card.propTypes = {
+  movie: PropTypes.shape({
+    id: PropTypes.string,
+    Title: PropTypes.string,
+    Year: PropTypes.string,
+    Poster: PropTypes.string,
+    Type: PropTypes.string,
+  }).isRequired,
 };
 
 export default Card;
