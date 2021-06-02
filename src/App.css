@@ -1,0 +1,9 @@
+.hero_section {
+  height: 550px;
+  background-image: url("https://www.ionos.es/digitalguide/fileadmin/DigitalGuide/Teaser/movie-maker-alternative.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}

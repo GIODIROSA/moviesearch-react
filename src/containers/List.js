@@ -66,7 +66,7 @@ class List extends Component {
             {this.state.error ? this.state.error : ""}
           </p>
         </div>
-        <div className="row">
+        <div className="row mx-0">
           {data.map((movie, i) => {
             return <Card movie={movie} key={i} />;
           })}
